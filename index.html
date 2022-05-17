@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Array Product Table</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+        <p id="validation"></p>
+      <div>Company:- <input type="text" id="company" /></div><br>
+      <div>Model:- <input type="text" id="model" /></div><br>
+      <div>Momory(GB):- <input type="number" id="memory" /></div><br>
+      <div>Product Price:- <input type="number" id="price" /></div><br>
+      <div>Quantity:- <input type="number" id="quantity" /></div>
+    </div>
+
+    <button onclick="myFunction()" id="Button">ADD</button><br><br>
+<h3>Sort Items</h3>
+    <select name = "" id = "Arrange">
+        <option> --Sort-- </option>
+        <option value="ascending"> Ascending </option>
+        <option value="descending"> Descending </option>
+        </select>
+
+        <select name="" id="Col">
+        <option> --Sort by-- </option>
+        <option value="company"> Company </option>
+        <option value="model"> Model </option>
+        <option value="memory"> Memory </option>
+        <option value="price"> Price </option>
+        </select>
+
+        <button onclick="sort()" >Sort</button>
+    <br>
+    <br>
+    <h3>Search Items</h3>
+        <select name="" id="field">
+            <option value="">--Select Field--</option>
+            <option value="Company">Company</option>
+            <option value="model">Model</option>
+            <option value="memory">Memory</option>
+            <option value="price">Price</option>
+          </select>
+          <input type="text" id="fieldtype" />
+          <button onclick="search()">Search</button>
+<br><br>
+          <div id="demo"></div>
+<h3>Add To Cart Items</h3>
+        <select name="" id="Product">
+            <option> -Select Product- </option>
+            </select>
+            <input type="number" id="quan" />
+            <button onclick="addtocart()">Add</button>
+            <button onclick="generatebill()">Generate Bill</button>
+            <div id="Product_Bill"></div>
+
+            <h3>Update Quantity </h3>
+      <select name="" id="Items">
+        <option value="">-Select Field-</option>
+      </select>
+      <input type="number" id="Qty" />
+      <button onclick="ItemsUpdate()">Update</button>
+      <div id="Product_Bill"></div>
+
+      <h3>Sorting by Price </h3>
+     <input type="number" id="minimum" placeholder="Minimum Price">
+     <input type="number" id="maximum" placeholder="Maximum Price">
+
+      <button onclick="SortbyPrice()">Price Sort</button>
+
+      <h3>Please Give Your Rating</h3>
+      <select name="" id="rating">
+        <option value="Select Product">--Select Product--</option>
+        <option value="My value">My value</option>
+      </select>
+      <select name="" id="Rate_me">
+        <option value="">--Select Rating--</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+
+      <button onclick="Rating()">Rate Me</button><br />
+      <br />
+
+      <div id="Rate"></div>
+
+
+      <!-- <table>
+        <tr>
+           <th>Company</th>
+          <th>Model</th>
+          <th>Memory(GB)</th>
+          <th>Price(Rs)</th>
+          <th>Quantity</th> -->
+        <!-- </tr>
+        <td></td>
+      </table>  -->
+
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
